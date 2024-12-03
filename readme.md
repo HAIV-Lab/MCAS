@@ -1,2 +1,2 @@
 
-The code repository for "Vision-Language Dual-Pattern Matching for Out-of-Distribution Detection" in PyTorch.
+The code repository for "Learning Visual-Semantic Hierarchical Attribute Space for Interpretable Open-set Recognition" in PyTorch.
