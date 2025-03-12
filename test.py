@@ -1,4 +1,4 @@
-from test.utils import EvaluateOpenSet, ModelTemplate
+from tests.utils import EvaluateOpenSet, ModelTemplate
 from utils.utils import strip_state_dict
 import importlib
 import torch
@@ -271,19 +271,8 @@ if __name__ == '__main__':
         Loss = importlib.import_module('methods.MCAS.loss.' + options['loss'])
         criterion = getattr(Loss, options['loss'])(**options)
         criterion = criterion.cuda()
-        if args.use_attribute == False:
-            test_cls(model, criterion, dataloaders['test_known'], dataloaders['test_unknown'], epoch=600, **options)
 
         if args.use_attribute == True:
-
-            att_mask = sampleing_atts(model, dataloaders['val'], 0.2, **options)
-            options['attmask'] = att_mask
-            print('*'*60,'mls','*'*60)
-            print('*' * 60, 'mls+hyre', '*' * 60)
-
-            print('*'*60,'msp','*'*60)
-            test_att(model, criterion, dataloaders['test_known'], dataloaders['test_unknown'], True,False, **options)
-            print('*'*60,'msp+hyre','*'*60)
-            test_att(model, criterion, dataloaders['test_known'], dataloaders['test_unknown'], True,True, **options)
+            test_att(model, criterion, dataloaders['test_known'], dataloaders['test_unknown'], **options)
 
  
