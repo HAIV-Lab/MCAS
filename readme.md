@@ -1,6 +1,6 @@
 # Learning Visual-Semantic Hierarchical Attribute Space for Interpretable Open-Set Recognition
 
-The official code repository for "Zhuo Xu and Xiang Xiang: Learning Visual-Semantic Hierarchical Attribute Space for Interpretable Open-set Recognition. In WACV, 2025" in PyTorch.
+The official code repository for "Zhuo Xu and Xiang Xiang: Learning Visual-Semantic Hierarchical Attribute Space for Interpretable Open-set Recognition. In WACV, 2025" in PyTorch. MCAS stands for "Maximum Category-Attribute Score" proposed in this paper.
 
 ## Train
 Please run the following commands for trainng:
